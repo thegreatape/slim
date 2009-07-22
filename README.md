@@ -8,7 +8,7 @@ To Use
 2. Add slim to your modules in your application's app.properties: `modules = slim`
 3. In your application's init method, use slim.add to create named sets of static resources to be compressed. For example:
     
-     slim.add('main', {prefix: '/apps/myapp/static/',
+        slim.add('main', {prefix: '/apps/myapp/static/',
                        css: {src: ['main.css',
                                    'section.css'],
                              target: 'all.css'},
