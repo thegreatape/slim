@@ -28,7 +28,11 @@ public class CssCompressor {
         }
     }
 
-    public void compress(Writer out, int linebreakpos)
+    public String compress(int linebreakpos) throws IOException{
+	return compress(null, linebreakpos);
+    }
+
+    public String compress(Writer out, int linebreakpos)
             throws IOException {
 
         Pattern p;
@@ -182,7 +186,9 @@ public class CssCompressor {
         // Trim the final string (for any leading or trailing white spaces)
         css = css.trim();
 
-        // Write the output...
-        out.write(css);
+	if(out != null){
+	    out.write(css);
+	}
+	return css;
     }
 }

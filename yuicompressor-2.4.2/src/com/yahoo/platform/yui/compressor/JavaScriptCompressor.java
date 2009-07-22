@@ -562,6 +562,10 @@ public class JavaScriptCompressor {
         this.logger = reporter;
         this.tokens = parse(in, reporter);
     }
+    public String compress(int linebreak, boolean munge, boolean verbose,
+			   boolean preserveAllSemiColons, boolean disableOptimizations) throws IOException{
+	return compress(null, linebreak, munge, verbose, preserveAllSemiColons, disableOptimizations);
+    }
 
     public String compress(Writer out, int linebreak, boolean munge, boolean verbose,
             boolean preserveAllSemiColons, boolean disableOptimizations)
@@ -582,7 +586,9 @@ public class JavaScriptCompressor {
         mungeSymboltree();
         StringBuffer sb = printSymbolTree(linebreak, preserveAllSemiColons);
 
-        out.write(sb.toString());
+	if(out != null){
+	    out.write(sb.toString());
+	}
 	return sb.toString();
     }
 
