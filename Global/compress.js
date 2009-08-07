@@ -1,3 +1,10 @@
+/**
+ * Slim	
+ * Author: Thomas Mayfield <Thomas.Mayfield@gmail.com
+ * Copyright (c) 2009 Thomas Mayfield All rights reserved.
+ * Code licensed under the BSD License:
+ *     http://www.opensource.org/licenses/bsd-license.php
+ */
 slim = {
     write_to_file: function (str, target){
 	var writer;
