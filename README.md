@@ -26,3 +26,8 @@ At startup, `/apps/myapp/static/main.css` and `/apps/myapp/static/section.css` w
 If your app.properties has `slim.compress = true`, then those elements will be replaced with just the combined, minified copies.  Otherwise, each of the individual files will be used.
         
 
+Todo
+----
+
+1. Add event to compress upon resource update.
+2. Resolve relative paths in compressed CSS.
