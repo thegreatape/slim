@@ -1,6 +1,6 @@
 Slim
 ====
-Slim is a module for Axiom Stack that can automatically create minified, concatentated copies of your client-side javascript and css.   You can switch back and forth between the minified copies and development copies with a single config option.
+Slim is a module for Axiom Stack that can automatically create minified, concatenated copies of your client-side javascript and css.   You can switch back and forth between the minified copies and development copies with a single config option.
 
 To Use
 ------
